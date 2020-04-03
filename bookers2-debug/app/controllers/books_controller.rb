@@ -3,12 +3,12 @@ class BooksController < ApplicationController
 
   def show
       @comment = Comment.new
-      @comments = @book.comments.order(id: "DESC")
+      @comments = @book.comments.order(created_at: :desc)
   end
 
   def index
 	@book = Book.new
-  	@books = Book.all.order(id: "DESC") #一覧表示するためにBookモデルの情報を全てくださいのall
+  	@books = Book.all.order(created_at: :desc) #一覧表示するためにBookモデルの情報を全てくださいのall
   end
 
   def create

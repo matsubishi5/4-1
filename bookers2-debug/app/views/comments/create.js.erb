@@ -1,3 +1,0 @@
-$("textarea").val("");
-$(".new_comment").before('<tr class="comments_<%= @comment.id %>"></tr>');
-$(".comments_<%= @comment.id %>").html("<%= j(render 'books/comments', comment: @comment ) %>");
